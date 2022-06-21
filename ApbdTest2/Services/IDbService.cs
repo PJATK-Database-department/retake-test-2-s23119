@@ -8,12 +8,12 @@ namespace APBDTest2Retake.Services
 {
     public interface IDbService
     {
-        public Task<GetFireTruckResponse> GetFiretruckAsync(int idFiretruck);
-        public async Task<bool> DoesFireTruckExistAsync(int idFiretruck);
-        public async Task UpdateActionEndDateAsync(int idAction, DateTime newEndDate);
-        public async Task<bool> DoesActionExistAsync(int idAction);
-        public async Task<bool> IsActionEndDateEmptyAsync(int idAction);
-        public async Task<bool> IsNewActionDateEarlierAsync(int idAction, DateTime newEndDate);
+        Task<GetFireTruckResponse> GetFiretruckAsync(int idFiretruck);
+        Task<bool> DoesFireTruckExistAsync(int idFiretruck);
+        Task UpdateActionEndDateAsync(int idAction, DateTime newEndDate);
+        Task<bool> DoesActionExistAsync(int idAction);
+        Task<bool> IsActionEndDateEmptyAsync(int idAction);
+        Task<bool> IsEndActionDateEarlierAsync(int idAction, DateTime newEndDate);
 
     }
 

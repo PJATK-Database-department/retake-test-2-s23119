@@ -62,10 +62,10 @@ namespace APBDTest2Retake.Services
             return action.EndTime == null;
         }
 
-        public async Task<bool> IsNewActionDateEarlierAsync(int idAction, DateTime newEndDate)
+        public async Task<bool> IsEndActionDateEarlierAsync(int idAction, DateTime newEndDate)
         {
             var action = await _dbContext.Actions.SingleOrDefaultAsync(x => x.IdAction == idAction);
-            return action.EndTime > newEndDate;
+            return action.StartTime > newEndDate;
         }
 
 
