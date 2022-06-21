@@ -29,10 +29,10 @@ namespace ApbdTest2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<s23119Context>(opt =>
-            //{
-            //    opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            //});
+            services.AddDbContext<s23119Context>(opt =>
+            {
+                opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
             services.AddScoped<IDbService, DbService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
