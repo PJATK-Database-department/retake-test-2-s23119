@@ -64,5 +64,12 @@ ALTER TABLE Firefighter_Action ADD CONSTRAINT Firefighter_Action_Firefighter
     FOREIGN KEY (IdFirefighter)
     REFERENCES Firefighter (IdFirefighter);
 
+insert into firefighter values (1, 'John', 'Doe');
+insert into firefighter values (2, 'Jane', 'Doe');
+insert into [action] values (1, 01/01/98, 02/01/99, 'True');
+insert into firetruck values (1, '31231', 'True');
+insert into firefighter_action values (1, 1);
+insert into firefighter_action values (2, 1);
+insert into firetruck_action values (1, 1, 1, 03/01/99);
 -- End of file.
 
